@@ -27,7 +27,7 @@ noncomputable def generating : S :=
 noncomputable def a (n : ℕ) : ℚ := coeff n generating
 
 /-- Mathar's five-step recurrence for every index from five onwards. -/
-theorem main (n : ℕ) (hn : 5 ≤ n) :
+theorem main : ∀ n : ℕ, 5 ≤ n →
     n * a n + 3*(2-3*(n:ℚ))*a (n-1) + 2*(7*(n:ℚ)-13)*a (n-2) +
     2*(12-5*(n:ℚ))*a (n-3) + (5*(n:ℚ)-16)*a (n-4) + (4-(n:ℚ))*a (n-5) = 0 := by
   sorry
